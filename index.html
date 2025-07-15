@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mis XV Años - Dulce Maria</title>
+
+  <!-- Fuentes tipo princesa -->
+  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Princess+Sofia&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+
+  <!-- Pantalla de carga -->
+  <div id="pantalla-carga">
+    <div class="loader"></div>
+  </div>
+
+  <!-- Música de fondo -->
+  <audio autoplay loop>
+    <source src="Musica/Cuento de hadasCamino a casa (1).mp3" type="audio/mpeg" />
+    Tu navegador no soporta audio HTML5.
+  </audio>
+
+  <!-- Header -->
+  <header class="hero scroll-anim ">
+    <img src="images/Portada.jpeg" alt="Foto de la quinceañera" class="foto-header" />
+    <div class="texto-header">
+      <h1 class="titulo">Mis XV Años</h1>
+      <h2 class="nombre">Dulce Maria</h2>
+      <p class="fecha">Sábado 15 de Agosto de 2025</p>
+    </div>
+  </header>
+
+<div class="linea-decorativa scroll-anim"></div>
+  <!-- Contador -->
+  <section class="contador scroll-anim decorada">
+    <h3>Faltan:</h3>
+    <div id="cuenta-regresiva decorada">
+      <span><strong id="dias">--</strong> días</span>
+      <span><strong id="horas">--</strong> hrs</span>
+      <span><strong id="minutos">--</strong> min</span>
+      <span><strong id="segundos">--</strong> seg</span>
+    </div>
+  </section>
+
+<div class="linea-decorativa scroll-anim"></div>
+
+  <!-- Galería deslizable -->
+  <section class="galeria scroll-anim decorada">
+    <div class="galeria-interactiva">
+      <button onclick="cambiarFoto(-1)" class="galeria-btn izq">⟨</button>
+      <img id="foto-galeria" src="images/q1.jpg" alt="Foto" />
+      <button onclick="cambiarFoto(1)" class="galeria-btn der">⟩</button>
+    </div>
+  </section>
+
+<div class="decor scroll-anim">
+  <svg viewBox="0 0 1440 150" preserveAspectRatio="none">
+    <path d="M0,96C240,0,480,192,720,96C960,0,1200,192,1440,96L1440,0L0,0Z"></path>
+  </svg>
+</div>
+
+  <!-- Código de vestimenta -->
+  <section class="vestimenta scroll-anim decorada">
+    <h3>Código de Vestimenta</h3>
+    <p>Mujeres: Vestido largo en tonos pastel o dorado<br />Hombres: Traje formal o guayabera elegante</p>
+
+    <div class="vestimenta-iconos">
+      <div>
+        <img src="Logos/vestido.png" alt="Vestido" />
+        <p>Mujeres</p>
+      </div>
+      <div>
+        <img src="Logos/traje.png" alt="Traje" />
+        <p>Hombres</p>
+      </div>
+    </div>
+
+    <div class="colores-prohibidos scroll-anim decorada">
+      <p><strong>Evita usar estos tonos:</strong></p>
+      <div class="muestras-color">
+        <div style="background-color: #A8E6A3;" title="Verde Pistache"></div>
+        <div style="background-color: #BFFF00;" title="Verde Limón"></div>
+        <div style="background-color: #4CAF50;" title="Verde Pasto"></div>
+      </div>
+      <small>Son similares al color del vestido de la quinceañera 💚</small>
+    </div>
+  </section>
+
+<div class="decor decor-curve scroll-anim">
+  <svg viewBox="0 0 1440 150" preserveAspectRatio="none">
+    <path d="M0,96C240,0,480,192,720,96C960,0,1200,192,1440,96L1440,0L0,0Z"></path>
+  </svg>
+</div>
+
+  <!-- Collage de 3 fotos -->
+  <section class="collage scroll-anim">
+    <h3>Unas memorias ✨</h3>
+    <div class="collage-fotos scroll-anim">
+      <img src="images/q1.jpg" alt="Foto 1" class="expandible" />
+      <img src="images/q2.jpg" alt="Foto 2" class="expandible" />
+      <img src="images/q3.jpeg" alt="Foto 3" class="expandible" />
+    </div>
+  </section>
+
+<div class="decor decor-curve invert svg">
+  <svg viewBox="0 0 1440 150" preserveAspectRatio="none">
+    <path d="M0,96C240,0,480,192,720,96C960,0,1200,192,1440,96L1440,0L0,0Z"></path>
+  </svg>
+</div>
+
+  <!-- Botones -->
+  <section class="acciones scroll-anim decorada">
+    <div class="boton-container scroll-anim ">
+      <a href="https://docs.google.com/forms/d/e/1FAIpQLSfpjUiFEeINheLJVrPXEpmxBgCb7E4IQ74Zzif9wQ4JkjFqyA/viewform?usp=header " target="_blank">
+        <img src="Logos/asistencia.png" class="icono" />
+        <p>Asistencia</p>
+      </a>
+    </div>
+    <div class="boton-container scroll-anim">
+      <a href="https://amazon.com.mx/tu-lista" target="_blank">
+        <img src="Logos/regalos.png" class="icono" />
+        <p>Regalos</p>
+      </a>
+    </div>
+  </section>
+<div class="decor invert svg scroll-anim">
+  <svg viewBox="0 0 1440 150" preserveAspectRatio="none">
+    <path d="M0,96C240,0,480,192,720,96C960,0,1200,192,1440,96L1440,0L0,0Z"></path>
+  </svg>
+</div>
+  <!-- Muro de recuerdos -->
+  <section class="muro-recuerdos scroll-anim">
+    <h3>Muro de Recuerdos 📸</h3>
+    <div class="muro-grid">
+      <img src="images/d1.jpg" alt="Recuerdo 1" class="expandible" />
+      <img src="images/d2.jpg" alt="Recuerdo 2" class="expandible" />
+      <img src="images/d3.jpg" alt="Recuerdo 3" class="expandible" />
+      <img src="images/d4.jpg" alt="Recuerdo 4" class="expandible" />
+      <img src="images/d5.jpg" alt="Recuerdo 5" class="expandible" />
+      <img src="images/d6.jpg" alt="Recuerdo 6" class="expandible" />
+      <img src="images/d7.jpg" alt="Recuerdo 1" class="expandible" />
+      <img src="images/d8.jpg" alt="Recuerdo 2" class="expandible" />
+      <img src="images/d9.jpg" alt="Recuerdo 3" class="expandible" />
+      <img src="images/d10.jpg" alt="Recuerdo 4" class="expandible"/>
+      <img src="images/d11.jpg" alt="Recuerdo 5" class="expandible"/>
+      <img src="images/d12.jpg" alt="Recuerdo 6" class="expandible"/>
+      <img src="images/d13.jpg" alt="Recuerdo 3" class="expandible" />
+      <img src="images/d14.jpg" alt="Recuerdo 4" class="expandible" />
+      <img src="images/d15.jpg" alt="Recuerdo 5" class="expandible" />
+    </div>
+  </section>
+
+<div class="linea-decorativa scroll-anim"></div>
+  <!-- Itinerario -->
+<section class="itinerario scroll-anim decorada">
+  <h3>Itinerario del Gran Día ⏰</h3>
+  <div class="itinerario-items">
+    <div class="evento">
+      <img src="Logos/recepcion.png" alt="Recepccion" />
+      <h4>Recepccion</h4>
+      <p>5:00 PM - Maria Bonita</p>
+    </div>
+    <div class="evento">
+      <img src="Logos/vals.png" alt="Vals" />
+      <h4>Vals</h4>
+      <p>6:30 PM</p>
+    </div>
+    <div class="evento">
+      <img src="Logos/brindis.png" alt="Brindis" />
+      <h4>Brindis</h4>
+      <p>7:30 PM</p>
+    </div>
+    <div class="evento">
+      <img src="Logos/comida.png" alt="Comida" />
+      <h4>Comida</h4>
+      <p>8:00 PM - Salón</p>
+    </div>
+    <div class="evento">
+      <img src="Logos/baile.png" alt="Baile Moderno" />
+      <h4>Baile Moderno</h4>
+      <p>9:00 PM</p>
+    </div>
+    <div class="evento">
+      <img src="Logos/pastel.png" alt="Pastel" />
+      <h4>Pastel</h4>
+      <p>9:30 PM en adelante 🎉</p>
+    </div>
+  </div>
+</section>
+
+
+<div class="linea-decorativa scroll-anim"></div>
+
+
+<div class="decor scroll-anim">
+  <svg viewBox="0 0 1440 150">
+    <path fill="#f7e597" fill-opacity="1" d="M0,96L48,106.7C96,117,192,139,288,138.7C384,139,480,117,576,106.7C672,96,768,96,864,122.7C960,149,1056,203,1152,208C1248,213,1344,171,1392,149.3L1440,128L1440,0L1392,0C1344,0,1248,0,1152,0C1056,0,960,0,864,0C768,0,672,0,576,0C480,0,384,0,288,0C192,0,96,0,48,0L0,0Z"></path>
+  </svg>
+</div>
+
+
+
+  <!-- Ubicación -->
+  <section class="ubicacion scroll-anim">
+    <h3>Ubicación del Evento</h3>
+    <p>Salón Maria Bonita, Coatzacoalcos, Ver.</p>
+    <a href="https://maps.app.goo.gl/naWa3sDY3oMZ1Z2x7" target="_blank" class="link-maps">Abrir en Google Maps</a>
+    <div class="mapa-container">
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2952.016599751904!2d-94.43250809999999!3d18.1538392!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85e982e4896e0fdd%3A0x7bc9fd0015ae36ad!2zU2Fsw7NuIE1hcsOtYSBCb25pdGE!5e1!3m2!1ses-419!2smx!4v1752380061444!5m2!1ses-419!2smx"
+        width="100%"
+        height="300"
+        style="border:0;"
+        allowfullscreen=""
+        loading="lazy"
+      ></iframe>
+    </div>
+  </section>
+<div class="decor decor-zigzag scroll-anim"></div>
+  
+<div class="decor invert svg">
+  <svg viewBox="0 0 1440 150">
+    <path fill="#f7e597" fill-opacity="1" d="M0,96L48,106.7C96,117,192,139,288,138.7C384,139,480,117,576,106.7C672,96,768,96,864,122.7C960,149,1056,203,1152,208C1248,213,1344,171,1392,149.3L1440,128L1440,0L1392,0C1344,0,1248,0,1152,0C1056,0,960,0,864,0C768,0,672,0,576,0C480,0,384,0,288,0C192,0,96,0,48,0L0,0Z"></path>
+  </svg>
+</div>
+
+  <!-- Trivia -->
+<section id="trivia" class="scroll-anim">
+  <h3>Trivia de la Quinceañera</h3>
+  <p id="pregunta-adivinanza">Cargando pregunta...</p>
+
+  <input type="text" id="input-adivinanza" placeholder="Escribe tu respuesta aquí" autocomplete="off" />
+  <button id="boton-adivinar">Adivinar</button>
+
+  <p id="mensaje-adivinanza"></p>
+</section>
+
+
+  <!-- Footer -->
+  <footer>
+    <p>¡Te espero con mucha emoción en mi cuento de hadas! ✨🐸👑</p>
+  </footer>
+
+  <!-- Lightbox para galería expandible -->
+  <div id="lightbox" class="lightbox" style="display:none;">
+    <span id="cerrar-lightbox" class="cerrar-lightbox">✕</span>
+    <img id="lightbox-img" src="" alt="Foto grande" />
+    <div class="lightbox-nav">
+      <button id="prev-lightbox" class="lightbox-btn">‹</button>
+      <button id="next-lightbox" class="lightbox-btn">›</button>
+    </div>
+  </div>
+
+  <script src="re.js"></script>
+</body>
+</html>
