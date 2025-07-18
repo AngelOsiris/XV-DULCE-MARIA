@@ -686,13 +686,13 @@ body {
 .decorada::before {
   top: -10px;
   left: -10px;
-  background-image: url('logos/flores.png');
+  background-image: url('Logos/flores.png');
 }
 
 .decorada::after {
   bottom: -10px;
   right: -10px;
-  background-image: url('logos/flores con.png');
+  background-image: url('Logos/flores con.PNG');
 }
 
 .itinerario {
