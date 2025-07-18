@@ -128,7 +128,7 @@ function adivinar() {
 const preguntas = [
   {
     pregunta: "¿Cuál es el color del vestido de la quinceañera?",
-    respuestas: ["rosa", "rosado", "rosa pastel", "rosa pastel"] 
+    respuestas: ["verde", "verde pistache", "verde cemento", "verde"] 
   },
   {
     pregunta: "¿En qué fecha es la fiesta?",
@@ -136,7 +136,7 @@ const preguntas = [
   },
   {
     pregunta: "¿Cómo se llama la quinceañera?",
-    respuestas: ["maría", "maria", "maría gonzález", "maria gonzalez"]
+    respuestas: ["Dulce", "dulce", "Dulce Maria", "dulce maria"]
   }
 ];
 

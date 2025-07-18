@@ -13,7 +13,7 @@ html, body {
 
 body {
   font-family: 'Georgia', serif;
-  background-color: #9AB28A;
+  background-color: linear-gradient(180deg, #94A681 0%, #AABF95 25%, #E3F2D8 50%, #94A681 75%,#AABF95 100%);
   color: #5e3d1e;
   text-align: center;
   line-height: 1.6;
@@ -79,11 +79,12 @@ header.hero {
 
 .texto-header {
   position: absolute;
-  bottom: 30px;
+  top: 10px;
+  bottom: 20px;
   left: 50%;
   transform: translateX(-50%);
   background: rgba(0, 0, 0, 0.35);
-  padding: 20px 40px;
+  padding: 10px 20px;
   border-radius: 15px;
   box-shadow: 0 8px 15px rgba(0,0,0,0.4);
   width: 80%;
@@ -99,7 +100,7 @@ header.hero {
 
 /* Contador */
 .contador {
-  background-color: #E4D88C;
+  background-color: #F2F2F2;
   color: #5e3d1e;
   margin: 5px auto;
   padding: 5px;
@@ -140,13 +141,13 @@ header.hero {
 
 /* Vestimenta */
 .vestimenta {
-  background-color: #7F9D91;
+  background: linear-gradient(180deg,#94A681 0%, #94A681 50%, #E3F2D8 100%);
   color: #fff;
   max-width: 600px;
-  margin: 5px auto;
-  padding: 5px;
+  margin: 0px auto;
+  padding: 0px;
   border-radius: 5px;
-  box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+  box-shadow: 0 0px 0px rgb(254, 254, 254);
   font-size: 1.15em;
 
 }
@@ -188,8 +189,9 @@ header.hero {
 .acciones {
   display: flex;
   justify-content: center;
-  gap: 10px;
-  margin: 10px 0;
+  gap: 0px;
+  margin: 0px 0px;
+  background-color: #fff;
 }
 
 .boton-container {
@@ -204,7 +206,7 @@ header.hero {
 
 .icono:hover {
   transform: scale(1.1);
-  filter: drop-shadow(0 0 6px #f7e597);
+  filter: drop-shadow(0 0 6px #AABF95);
 }
 .boton-container a {
   color: inherit;
@@ -262,8 +264,11 @@ header.hero {
 
 /* Collage */
 .collage {
-  margin: 20px auto 10px auto;
+  margin: 0px auto 0px auto;
   max-width: 700px;
+  background: linear-gradient(180deg,#94A681 0%, #94A681 75%, #E3F2D8 100%);
+  background-attachment: fixed;;
+
 }
 
 .collage h3 {
@@ -282,7 +287,7 @@ header.hero {
 .collage-fotos img {
   width: 30%;
   border-radius: 12px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+  box-shadow: 0 4px 12px rgb(255, 255, 255);
   cursor: pointer;
   transition: transform 0.3s ease;
 }
@@ -293,7 +298,7 @@ header.hero {
 
 /* Muro de recuerdos */
 .muro-recuerdos {
-  max-width: 900px;
+  background: linear-gradient(180deg,#E3F2D8 0%, #94A681 50%, #E3F2D8 100%);max-width: 900px;
   margin: 60px auto;
   padding: 0 15px;
   border: 4px solid #E4D88C;
@@ -308,9 +313,11 @@ header.hero {
 }
 
 .muro-grid {
+
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
   gap: 2px; /* Mínima separación */
+
 }
 
 .muro-grid img {
@@ -321,6 +328,7 @@ header.hero {
   box-shadow: none; /* Sin sombra */
   cursor: pointer;
   transition: transform 0.2s ease;
+
 }
 
 
@@ -433,14 +441,14 @@ footer {
 /* Estrellas sutiles */
 .stars {
   position: fixed;
-  width: 3px;
-  height: 3px;
+  width: 4px;
+  height: 4px;
   background: #fff8dc;
   border-radius: 50%;
   animation: twinkle 2s infinite ease-in-out;
   pointer-events: none;
   z-index: 1;
-  opacity: 0.7;
+  opacity: 0.2
 }
 
 @keyframes twinkle {
@@ -476,7 +484,7 @@ footer {
   margin: 50px 0;
   /* Añadimos borde, fondo y sombra para que resalten */
   border: 3px solid #E4D88C; /* color dorado claro */
-  background-color: #FFF6D5; /* fondo claro */
+  background-color: #AABF95;; /* fondo claro */
   padding: 20px 40px;
   border-radius: 25px;
   box-shadow: 0 8px 20px rgba(228, 216, 140, 0.6);
@@ -595,8 +603,8 @@ footer {
 
 .firefly {
   position: fixed;
-  width: 6px;
-  height: 6px;
+  width: 2px;
+  height: 2px;
   background-color: #ffe066;
   border-radius: 50%;
   box-shadow: 0 0 8px 4px #ffe066;
@@ -612,7 +620,7 @@ footer {
 
 /* Fondo pastel con degradado */
 body {
-  background: linear-gradient(180deg, #e6f9e3 0%, #f7fdf4 100%);
+  background: linear-gradient(180deg, #94A681 0%, #AABF95 25%, #E3F2D8 50%, #94A681 75%,#AABF95 100%);
   background-attachment: fixed;
 }
 
@@ -671,7 +679,7 @@ body {
   height: 100px;
   background-repeat: no-repeat;
   background-size: contain;
-  opacity: 0.2;
+  opacity: 10;
   z-index: 0;
 }
 
@@ -688,8 +696,8 @@ body {
 }
 
 .itinerario {
-  background-color: #FAF3C0;
-  border: 3px solid #E4D88C;
+  background: linear-gradient(180deg, #E3F2D8 0%,#AABF95 75%, #94A681 100%);
+  border: 3px solid #d4c067;
   border-radius: 15px;
   max-width: 400px;
   margin: 10px auto;
@@ -783,7 +791,7 @@ body {
 }
 
 .decor path {
-  fill: #f7e597; /* Color dorado claro */
+  fill: #E3F2D8; /* Color dorado claro */
   fill-opacity: 1;
 }
 
