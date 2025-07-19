@@ -208,6 +208,18 @@ inputAdivinanza.addEventListener("keydown", (e) => {
   }
 });
 
+window.addEventListener("DOMContentLoaded", function () {
+  const audio = document.getElementById("bg-music");
+
+  // Iniciar reproducción después del primer clic del usuario
+  window.addEventListener("click", () => {
+    audio.play().catch((e) => {
+      console.log("Reproducción bloqueada:", e);
+    });
+  }, { once: true }); // Solo una vez
+});
+
+
 // Mostrar la primera pregunta cuando cargue todo
 document.addEventListener("DOMContentLoaded", mostrarPregunta);
 
