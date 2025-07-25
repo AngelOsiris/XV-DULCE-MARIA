@@ -9,6 +9,9 @@
   <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Princess+Sofia&display=swap" rel="stylesheet" />
 
   <link rel="stylesheet" href="styles.css" />
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="shortcut icon" href="imagesf/ico2.ico"> 
 </head>
 <body>
 
@@ -21,12 +24,17 @@
   </div>
 
   <!-- Música de fondo -->
-<audio id="bg-music" src="Musica/M1.mp3" loop></audio>
+<audio id="bg-music" src="Musica/M1.mp3" autoplay loop></audio>
+
+<button id="toggle-music">
+  <i class="fas fa-pause icono-musica"></i>
+</button>
+
 
 
   <!-- Header -->
   <header class="hero scroll-anim ">
-    <img src="images/Portada.jpeg" alt="Foto de la quinceañera" class="foto-header" />
+    <img src="images/dd1.jpg" alt="Foto de la quinceañera" class="foto-header" />
     <div class="texto-header">
       <h1 class="titulo">Mis XV Años</h1>
       <h2 class="nombre">Dulce Maria</h2>
@@ -52,7 +60,7 @@
   <section class="galeria scroll-anim decorada">
     <div class="galeria-interactiva">
       <button onclick="cambiarFoto(-1)" class="galeria-btn izq">⟨</button>
-      <img id="foto-galeria" src="images/q1.jpg" alt="Foto" />
+      <img id="foto-galeria" src="images/dd4.jpg" alt="Foto" />
       <button onclick="cambiarFoto(1)" class="galeria-btn der">⟩</button>
     </div>
   </section>
@@ -66,7 +74,7 @@
   <!-- Código de vestimenta -->
   <section class="vestimenta scroll-anim decorada">
     <h3>Código de Vestimenta</h3>
-    <p>Mujeres: Vestido o formales<br />Hombres: Formal</p>
+    <p>Hombres y Mujeres:<br />Formales</p>
 
     <div class="vestimenta-iconos">
       <div>
@@ -80,7 +88,7 @@
     </div>
 
     <div class="colores-prohibidos scroll-anim">
-      <p><strong>Evita usar estos tonos:</strong></p>
+      <p><strong>Evita usar cualquier tono de verde:</strong></p>
       <div class="muestras-color">
         <div style="background-color: #94A681;" title="Verde Pistache"></div>
         <div style="background-color: #AABF95;" title="Verde Limón"></div>
@@ -100,11 +108,11 @@
 
   <!-- Collage de 3 fotos -->
   <section class="collage scroll-anim">
-    <h3>Unas memorias ✨</h3>
+    <h3>Highlights✨</h3>
     <div class="collage-fotos scroll-anim">
-      <img src="images/q1.jpg" alt="Foto 1" class="expandible" />
-      <img src="images/q2.jpg" alt="Foto 2" class="expandible" />
-      <img src="images/q3.jpeg" alt="Foto 3" class="expandible" />
+      <img src="images/dd10.jpg" alt="Foto 1" class="expandible" />
+      <img src="images/dd6.jpg" alt="Foto 2" class="expandible" />
+      <img src="images/dd5.jpg" alt="Foto 3" class="expandible" />
     </div>
   </section>
 
@@ -113,29 +121,34 @@
     <path d="M0,96C240,0,480,192,720,96C960,0,1200,192,1440,96L1440,0L0,0Z"></path>
   </svg>
 </div>
+<!-- Botones -->
+<section class="acciones scroll-anim decorada">
+  <h2 class="titulo-seccion">Confirma Asistencia</h2>
 
-  <!-- Botones -->
-  <section class="acciones scroll-anim decorada">
-    <div class="boton-container scroll-anim ">
-      
-      <a href="https://docs.google.com/forms/d/e/1FAIpQLSfpjUiFEeINheLJVrPXEpmxBgCb7E4IQ74Zzif9wQ4JkjFqyA/viewform?usp=header " target="_blank">
+  <div class="contenedor-botones">
+    <div class="boton-container scroll-anim">
+      <a href="https://docs.google.com/forms/d/e/1FAIpQLSfpjUiFEeINheLJVrPXEpmxBgCb7E4IQ74Zzif9wQ4JkjFqyA/viewform?usp=header" target="_blank">
         <img src="Logos/asistencia.png" class="icono" />
         <p>Asistencia</p>
       </a>
     </div>
+    
     <div class="boton-container scroll-anim">
-  
       <a href="https://www.amazon.com.mx/registries/gl/guest-view/1N00QP8O0VZ2A?ref_=cm_sw_r_cp_ud_ggr-subnav-share_41GQQPNHMX3515DA3K0S" target="_blank">
-        <img src="Logos/regalos.png" class="icono" />
+        <img src="Logos/bolsa-de-dinero.png" class="icono" />
         <p>Regalos</p>
       </a>
     </div>
-  </section>
+  </div>
+</section>
+
+
 <div class="decor invert svg scroll-anim">
   <svg viewBox="0 0 1440 150" preserveAspectRatio="none">
     <path d="M0,96C240,0,480,192,720,96C960,0,1200,192,1440,96L1440,0L0,0Z"></path>
   </svg>
 </div>
+
   <!-- Muro de recuerdos -->
   <section class="muro-recuerdos scroll-anim">
     <h3>Muro de Recuerdos 📸</h3>
@@ -165,34 +178,30 @@
   <div class="itinerario-items">
     <div class="evento">
       <img src="Logos/recepcion.png" alt="Recepccion" />
-      <h4>Recepccion</h4>
-      <p>5:00 PM - Maria Bonita</p>
+      <h4>Recepción </h4>
+      <p>7:30 PM - Maria Bonita</p>
     </div>
     <div class="evento">
-      <img src="Logos/vals.png" alt="Vals" />
-      <h4>Vals</h4>
-      <p>6:30 PM</p>
+      <img src="Logos/v3.png" alt="Vals" />
+      <h4>Llegada de Dulce Maria</h4>
+      <p>8:15 PM</p>
     </div>
     <div class="evento">
       <img src="Logos/brindis.png" alt="Brindis" />
       <h4>Brindis</h4>
-      <p>7:30 PM</p>
+      <p>8:30 PM</p>
     </div>
     <div class="evento">
-      <img src="Logos/comida.png" alt="Comida" />
-      <h4>Comida</h4>
-      <p>8:00 PM - Salón</p>
+      <img src="Logos/vals.png" alt="Comida" />
+      <h4>Vals</h4>
+      <p>9:00 PM - Salón</p>
     </div>
     <div class="evento">
-      <img src="Logos/baile.png" alt="Baile Moderno" />
-      <h4>Baile Moderno</h4>
-      <p>9:00 PM</p>
+      <img src="Logos/comida.png" alt="Baile Moderno" />
+      <h4>Cena</h4>
+      <p>9:15 PM</p>
     </div>
-    <div class="evento">
-      <img src="Logos/pastel.png" alt="Pastel" />
-      <h4>Pastel</h4>
-      <p>9:30 PM en adelante 🎉</p>
-    </div>
+  
   </div>
 </section>
 
