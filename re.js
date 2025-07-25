@@ -1,4 +1,59 @@
 // Luciérnagas
+
+
+window.addEventListener("DOMContentLoaded", function () {
+  const audio = document.getElementById("bg-music");
+  const toggleButton = document.getElementById("toggle-music");
+  const icon = toggleButton.querySelector(".icono-musica");
+  let iniciado = false;
+
+  audio.volume = 0;
+
+  const fadeIn = () => {
+    let vol = 0;
+    const intervalo = setInterval(() => {
+      if (vol < 1) {
+        vol += 0.05;
+        audio.volume = Math.min(vol, 1);
+      } else clearInterval(intervalo);
+    }, 200);
+  };
+
+  const iniciar = () => {
+    if (!iniciado) {
+      audio.play()
+        .then(() => {
+          iniciado = true;
+          fadeIn();
+          console.log("🎵 Música iniciada");
+        })
+        .catch(err => {
+          console.log("Bloqueada. Esperando interacción.", err);
+        });
+    }
+  };
+
+  // Intento automático inicial
+  iniciar();
+
+  // Luego intenta al mínimo gesto del usuario
+  ["touchstart", "scroll", "click"].forEach(evt =>
+    window.addEventListener(evt, iniciar, { once: true })
+  );
+
+  // Control de botón flotante
+  toggleButton.addEventListener("click", function (e) {
+    e.stopPropagation();
+    if (audio.paused) {
+      audio.play();
+      icon.classList.replace("fa-play", "fa-pause");
+    } else {
+      audio.pause();
+      icon.classList.replace("fa-pause", "fa-play");
+    }
+  });
+});
+
 const NUM_LUCIERNAGAS = 40;
 for (let i = 0; i < NUM_LUCIERNAGAS; i++) {
   const firefly = document.createElement("div");
@@ -204,56 +259,7 @@ function verificarRespuesta() {
 
 botonAdivinar.addEventListener("click", verificarRespuesta);
 
-window.addEventListener("DOMContentLoaded", function () {
-  const audio = document.getElementById("bg-music");
-  const toggleButton = document.getElementById("toggle-music");
-  const icon = toggleButton.querySelector(".icono-musica");
-  let reproduccionIniciada = false;
 
-  audio.volume = 0;
-
-  const fadeIn = () => {
-    let vol = 0;
-    const interval = setInterval(() => {
-      if (vol < 1) {
-        vol += 0.05;
-        audio.volume = Math.min(vol, 1);
-      } else {
-        clearInterval(interval);
-      }
-    }, 200);
-  };
-
-  const iniciarReproduccion = () => {
-    if (!reproduccionIniciada) {
-      audio.play().then(() => {
-        reproduccionIniciada = true;
-        fadeIn();
-        console.log("Reproducción exitosa");
-      }).catch(err => {
-        console.log("Reproducción bloqueada. Esperando interacción", err);
-      });
-    }
-  };
-
-  // Eventos de interacción confiables en móviles
-  ["touchstart", "click", "scroll"].forEach(event => {
-    window.addEventListener(event, iniciarReproduccion, { once: true });
-  });
-
-  // Botón flotante de pausa/reproducción
-  toggleButton.addEventListener("click", function (e) {
-    e.stopPropagation();
-
-    if (audio.paused) {
-      audio.play();
-      icon.classList.replace("fa-play", "fa-pause");
-    } else {
-      audio.pause();
-      icon.classList.replace("fa-pause", "fa-play");
-    }
-  });
-});
 
 
 
