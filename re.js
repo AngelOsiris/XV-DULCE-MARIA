@@ -204,28 +204,47 @@ function verificarRespuesta() {
 
 botonAdivinar.addEventListener("click", verificarRespuesta);
 
-// Para que se pueda presionar Enter en el input y verificar también
-inputAdivinanza.addEventListener("keydown", (e) => {
-  if (e.key === "Enter") {
-    verificarRespuesta();
-  }
-});
-
 window.addEventListener("DOMContentLoaded", function () {
   const audio = document.getElementById("bg-music");
   const toggleButton = document.getElementById("toggle-music");
   const icon = toggleButton.querySelector(".icono-musica");
+  let reproduccionIniciada = false;
 
-  // Intenta reproducir de inmediato
-  const playMusic = () => {
-    audio.play().catch((error) => {
-      console.log("Reproducción automática bloqueada, esperando clic del usuario");
-    });
+  // Iniciar con volumen bajo para fade-in
+  audio.volume = 0;
+
+  const fadeIn = () => {
+    let vol = 0;
+    const fadeInterval = setInterval(() => {
+      if (vol < 1) {
+        vol += 0.05;
+        audio.volume = Math.min(vol, 1);
+      } else {
+        clearInterval(fadeInterval);
+      }
+    }, 200); // cada 200ms sube el volumen
   };
 
-  playMusic();
+  const iniciarReproduccion = () => {
+    if (!reproduccionIniciada) {
+      audio.play().then(() => {
+        reproduccionIniciada = true;
+        fadeIn();
+        console.log("Música iniciada");
+      }).catch((err) => {
+        console.log("Bloqueada. Esperando interacción...", err);
+      });
+    }
+  };
 
-  // Botón de control
+  // Intentar reproducir al cargar
+  iniciarReproduccion();
+
+  // Fallback: iniciar con scroll o touchstart
+  window.addEventListener("scroll", iniciarReproduccion, { once: true });
+  window.addEventListener("touchstart", iniciarReproduccion, { once: true });
+
+  // Botón de pausa / play
   toggleButton.addEventListener("click", function (e) {
     e.stopPropagation();
 
@@ -238,6 +257,7 @@ window.addEventListener("DOMContentLoaded", function () {
     }
   });
 });
+
 
 
 
