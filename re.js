@@ -210,19 +210,18 @@ window.addEventListener("DOMContentLoaded", function () {
   const icon = toggleButton.querySelector(".icono-musica");
   let reproduccionIniciada = false;
 
-  // Iniciar con volumen bajo para fade-in
   audio.volume = 0;
 
   const fadeIn = () => {
     let vol = 0;
-    const fadeInterval = setInterval(() => {
+    const interval = setInterval(() => {
       if (vol < 1) {
         vol += 0.05;
         audio.volume = Math.min(vol, 1);
       } else {
-        clearInterval(fadeInterval);
+        clearInterval(interval);
       }
-    }, 200); // cada 200ms sube el volumen
+    }, 200);
   };
 
   const iniciarReproduccion = () => {
@@ -230,21 +229,19 @@ window.addEventListener("DOMContentLoaded", function () {
       audio.play().then(() => {
         reproduccionIniciada = true;
         fadeIn();
-        console.log("Música iniciada");
-      }).catch((err) => {
-        console.log("Bloqueada. Esperando interacción...", err);
+        console.log("Reproducción exitosa");
+      }).catch(err => {
+        console.log("Reproducción bloqueada. Esperando interacción", err);
       });
     }
   };
 
-  // Intentar reproducir al cargar
-  iniciarReproduccion();
+  // Eventos de interacción confiables en móviles
+  ["touchstart", "click", "scroll"].forEach(event => {
+    window.addEventListener(event, iniciarReproduccion, { once: true });
+  });
 
-  // Fallback: iniciar con scroll o touchstart
-  window.addEventListener("scroll", iniciarReproduccion, { once: true });
-  window.addEventListener("touchstart", iniciarReproduccion, { once: true });
-
-  // Botón de pausa / play
+  // Botón flotante de pausa/reproducción
   toggleButton.addEventListener("click", function (e) {
     e.stopPropagation();
 
@@ -257,6 +254,7 @@ window.addEventListener("DOMContentLoaded", function () {
     }
   });
 });
+
 
 
 
